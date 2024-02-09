@@ -11,12 +11,15 @@ unsigned int binary_to_uint(const char *b)
 	int sum = 0;
 	int multiplier = 0;
 	int product;
+	int i;
+	int mult;
+	int to_digit;
 
 	while (b[count] != '\0')
 	{
 		count++;
 	}
-	for (int i = count - 1; i >= 0; i--)
+	for (i = count - 1; i >= 0; i--)
 	{
 		if (multiplier == 0)
 		{
@@ -25,14 +28,14 @@ unsigned int binary_to_uint(const char *b)
 		else
 		{
 			product = 1;
-			for (int mult = multiplier; mult > 0; mult--)
+			for (mult = multiplier; mult > 0; mult--)
 			{
 				product = product * 2;
 			}
 		}
-		int to_digit = b[i] - '0';
+		to_digit = b[i] - '0';
 
-		if (to_digit != 0 & to_digit != 1)
+		if ((to_digit != 0) & (to_digit != 1))
 		{
 			sum = 0;
 			return (0);
