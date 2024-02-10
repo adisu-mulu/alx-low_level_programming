@@ -11,10 +11,10 @@ int set_bit(unsigned long int *n, unsigned int index)
 	int i;
 	int l;
 	int bit;
-	int *bits;
+	unsigned long int *bits;
 	int num = *n;
 	int length = 0;
-	int toInt = 0;
+	unsigned long int toInt = 0;
 
 	if (num == 0)
 		length = index + 1;
@@ -28,7 +28,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 		length++;
 		}
 	}
-	bits = (int *)malloc(length * sizeof(int));
+	bits = (unsigned long int *)malloc(length * sizeof(unsigned long int));
 	index++;
 	bit = length - index;
 	for (i = 0; i < length; i++)
