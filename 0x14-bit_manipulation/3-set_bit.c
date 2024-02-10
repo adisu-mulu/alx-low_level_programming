@@ -4,48 +4,20 @@
 /**
  * set_bit - sets the bit at specified index to 1
  * @index: the bit to be set
- * @n: pointer to the number
+ * @n: the decimal whose bit will be set
  * Return: 1 if it workd or -1 if there is an error
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	int i;
-	int l;
-	int bit;
-	unsigned long int *bits;
-	int num = *n;
-	int length = 0;
-	unsigned long int toInt = 0;
+	unsigned long int mask;
+	unsigned long int l = sizeof(unsigned long int) * 8;
 
-	if (num == 0)
-		length = index + 1;
-	else if (num == 1)
-		length = index + 1;
-	else
+	if (index >= l)
 	{
-		while (num > 0)
-		{
-		num = num >> 1;
-		length++;
-		}
+		return (-1);
 	}
-	bits = (unsigned long int *)malloc(length * sizeof(unsigned long int));
-	index++;
-	bit = length - index;
-
-	for (i = 0; i < length; i++)
-	{
-		if (i == bit)
-			bits[i] = 1;
-		else
-			bits[i] = 0;
-	}
-	for (l = 0; l < length; l++)
-	{
-		toInt = (toInt << 1) | bits[l];
-	}
-	free(bits);
-	*n = *n | toInt;
+	mask = 1UL << index;
+	*n = *n | mask;
 	return (1);
 }
 
