@@ -17,9 +17,9 @@ int set_bit(unsigned long int *n, unsigned int index)
 	int toInt = 0;
 
 	if (num == 0)
-		length = 15;
+		length = index + 1;
 	else if (num == 1)
-		length = 15;
+		length = index + 1;
 	else
 	{
 		while (num > 0)
