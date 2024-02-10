@@ -46,7 +46,7 @@ unsigned int binary_to_uint(const char *b)
 			sum = sum + to_digit;
 			multiplier++;
 		}
-	}	
+	}
 	return (sum);
 }
 
