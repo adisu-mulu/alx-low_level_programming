@@ -10,10 +10,7 @@ unsigned int binary_to_uint(const char *b)
 	int count = 0;
 	int sum = 0;
 	int multiplier = 0;
-	int product;
-	int i;
-	int mult;
-	int to_digit;
+	int product, i, mult, to_digit;
 
 	while (b[count] != '\0')
 	{
@@ -22,9 +19,7 @@ unsigned int binary_to_uint(const char *b)
 	for (i = count - 1; i >= 0; i--)
 	{
 		if (multiplier == 0)
-		{
 			product = 1;
-		}
 		else
 		{
 			product = 1;
