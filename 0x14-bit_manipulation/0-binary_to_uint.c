@@ -14,7 +14,9 @@ unsigned int binary_to_uint(const char *b)
 	int product, i, mult, to_digit;
 
 	if (b == NULL)
+	{
 		return (0);
+	}
 	else
 	{
 		while (b[count] != '\0')
