@@ -43,6 +43,10 @@ int set_bit(unsigned long int *n, unsigned int index)
 		toInt = (toInt << 1) | bits[l];
 	}
 	free(bits);
-	return (*n | toInt);
+	*n = *n | toInt;
+	if (*n)
+		return (1);
+	else 
+		return (-1);
 }
 
