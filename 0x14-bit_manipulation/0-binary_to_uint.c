@@ -12,6 +12,7 @@ unsigned int binary_to_uint(const char *b)
 	int sum = 0;
 	int multiplier = 0;
 	int product, i, mult, to_digit;
+
 	if (b == NULL)
 		return (0);
 	else
