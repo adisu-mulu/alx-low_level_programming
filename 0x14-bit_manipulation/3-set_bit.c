@@ -31,9 +31,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	}
 	bits = (unsigned long int *)malloc(length * sizeof(unsigned long int));
 	if (bits == NULL)
-	{
 		return (-1);
-	}
 	else
 	{
 		index++;
