@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stddef.h>
 /**
  * set_bit - sets the bit at specified index to 1
  * @index: the bit to be set
@@ -29,6 +30,8 @@ int set_bit(unsigned long int *n, unsigned int index)
 		}
 	}
 	bits = (unsigned long int *)malloc(length * sizeof(unsigned long int));
+	if (bits == NULL)
+		return (-1);
 	index++;
 	bit = length - index;
 	for (i = 0; i < length; i++)
