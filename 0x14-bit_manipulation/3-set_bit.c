@@ -30,26 +30,22 @@ int set_bit(unsigned long int *n, unsigned int index)
 		}
 	}
 	bits = (unsigned long int *)malloc(length * sizeof(unsigned long int));
-	if (bits == NULL)
-		return (-1);
-	else
+	index++;
+	bit = length - index;
+
+	for (i = 0; i < length; i++)
 	{
-		index++;
-		bit = length - index;
-		for (i = 0; i < length; i++)
-		{
-			if (i == bit)
-				bits[i] = 1;
-			else
-				bits[i] = 0;
-		}
-		for (l = 0; l < length; l++)
-		{
-			toInt = (toInt << 1) | bits[l];
-		}
-		free(bits);
-		*n = *n | toInt;
-		return (1);
+		if (i == bit)
+			bits[i] = 1;
+		else
+			bits[i] = 0;
 	}
+	for (l = 0; l < length; l++)
+	{
+		toInt = (toInt << 1) | bits[l];
+	}
+	free(bits);
+	*n = *n | toInt;
+	return (1);
 }
 
