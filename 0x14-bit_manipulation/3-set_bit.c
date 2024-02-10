@@ -44,9 +44,6 @@ int set_bit(unsigned long int *n, unsigned int index)
 	}
 	free(bits);
 	*n = *n | toInt;
-	if (*n)
-		return (1);
-	else
-		return (-1);
+	return (1);
 }
 
