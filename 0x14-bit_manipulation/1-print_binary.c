@@ -17,7 +17,7 @@ void print_binary(unsigned long int n)
 	else
 	{
 		while (n > 0)
-		{	
+		{
 			n = n >> 1;
 			required_bits++;
 		}
@@ -34,6 +34,5 @@ void print_binary(unsigned long int n)
 			_putchar('0');
 		}
 	}
-	_putchar('\n');
-}
- 
+} 
+
