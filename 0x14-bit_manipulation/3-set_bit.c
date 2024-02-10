@@ -4,7 +4,7 @@
  * set_bit - sets the bit at specified index to 1
  * @index: the bit to be set
  * @n: pointer to the number
- * Return: modified numer
+ * Return: 1 if it workd or -1 if there is an error
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
@@ -46,7 +46,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	*n = *n | toInt;
 	if (*n)
 		return (1);
-	else 
+	else
 		return (-1);
 }
 
