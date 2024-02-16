@@ -20,7 +20,7 @@ int _strlen_recursion(char *s)
  * @l: positon
  * Return: boolean
  */
-int p1(char 8s, int l)
+int p1(char *s, int l)
 {
 	if (l < 1)
 	{
