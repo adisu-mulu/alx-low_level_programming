@@ -12,7 +12,7 @@ int main(void)
 	while (i < 100)
 	{
 		j = i % 10; /* single digit */
-		k = i % 10; /* doubles digit */
+		k = i / 10; /* doubles digit */
 
 		if (k < j)
 		{
