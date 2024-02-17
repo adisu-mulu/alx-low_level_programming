@@ -1,4 +1,8 @@
 #include "main.h"
+/**
+ * main - function
+ * Return: nothing
+ */
 int main(void)
 {
 	int n;
