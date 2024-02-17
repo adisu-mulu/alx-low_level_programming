@@ -34,10 +34,13 @@ size_t print_listint_safe(const listint_t *head)
 	while (head != NULL)
 	{
 		new = malloc(sizeof(listp_t));
+
 		if (new == NULL)
 			exit(98);
+
 		new->p = (void *)head;
 		new->next = hptr;
+		hptr = new;
 		add = hptr;
 
 		while (add->next != NULL)
