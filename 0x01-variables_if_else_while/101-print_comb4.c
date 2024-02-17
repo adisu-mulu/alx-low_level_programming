@@ -32,7 +32,7 @@ int main(void)
 				}
 				c++;
 			}
-			d++
+			d++;
 		}
 		e++;
 	}
