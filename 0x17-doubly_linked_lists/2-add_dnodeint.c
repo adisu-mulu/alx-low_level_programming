@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * *add_dnodeint - function
+ * add_dnodeint - function
  * @head: double pointer
  * @n: data
  * Return: address
