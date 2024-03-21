@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * add_dnodeint - function
+ * *add_dnodeint - function
  * @head: double pointer
  * @n: data
  * Return: address
@@ -9,7 +9,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *newnode;
 
-	newnode = (dlistint_t *)(malloc(sizeof(dlistint_t)));
+	newnode = malloc(sizeof(dlistint_t));
 	if (!newnode)
 	{
 		return (NULL);
