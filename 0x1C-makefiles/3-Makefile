@@ -1,6 +1,7 @@
 CC = gcc
 SRC= school.c main.c
 OBJ = $(patsubst %.c,%.o,$(SRC))
+RM = rm -f
 NAME= school
 all: $(NAME)
 $(NAME): $(OBJ)
@@ -8,11 +9,10 @@ $(NAME): $(OBJ)
 %.o: %.c
 	$(CC) -c $< -o $@
 clean:
-	rm -f *~ $(NAME)
+	$(RM) *~ $(NAME)
 oclean:
-	rm -f *.o
+	$(RM) *.o
 fclean:
-	rm -f *~ $(NAME)
-	rm -f *.o
-re:
-	make -f 3-Makefile
+	$(RM) *~ $(NAME)
+	$(RM) *.o
+re: all
